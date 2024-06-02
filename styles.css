@@ -17,6 +17,10 @@
     box-sizing: border-box;
 }
 
+img{
+    width: 100%;
+}
+
 body{
     font-family: "Roboto", sans-serif;
 }
@@ -25,6 +29,22 @@ body{
     max-width: var(--max-width);
     padding: 5rem 1rem;
     margin: auto;
+}
+
+.section__title{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.section__subtitle{
+    font-size: 2rem;
+    font-style: italic;
+    color: var(--primary-color);
+    margin-bottom: 5rem;
+    text-align: center;
 }
 
 nav{
@@ -114,6 +134,38 @@ header .section__container{
     background-color: var(--primary-color-dark);
 }
 
+.journey__container{
+    background-color: var(--secondary-color);
+}
+
+.journey__grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.country__card{
+    background-color: var(--extra-light);
+}
+
+.country__name{
+    padding: 1rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+.country__name i{
+    font-size: 1.2rem;
+}
+
+.country__name span{
+    font-style: italic;
+}
+
 @media (min-width: 640px) {
     .nav__links{
         display: flex;
@@ -132,5 +184,9 @@ header .section__container{
         text-align: left;
     }
 
+    .journey__grid{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
 
 }
