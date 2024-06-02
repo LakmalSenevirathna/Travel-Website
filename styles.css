@@ -48,7 +48,7 @@ nav{
 }
 
 .nav__links{
-    display: flex;
+    display: none;
     list-style: none;
     align-items: center;
     gap: 2rem;
@@ -112,4 +112,25 @@ header .section__container{
 
 .header__container button:hover{
     background-color: var(--primary-color-dark);
+}
+
+@media (min-width: 640px) {
+    .nav__links{
+        display: flex;
+    }
+
+    header .section__container{
+        justify-content: flex-start;
+    }
+
+    .header__container{
+        max-width: 400px;
+        align-items: flex-start;
+    }
+
+    .header__container p{
+        text-align: left;
+    }
+
+
 }
