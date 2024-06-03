@@ -166,6 +166,43 @@ header .section__container{
     font-style: italic;
 }
 
+.banner__container{
+    background-image: linear-gradient(rgba(35, 71, 103, .5),rgba(35, 71, 103, .5)), url("Img/img8.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner__container .section__container{
+    padding: 10rem 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.banner__content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    color: var(--extra-light);
+}
+
+.banner__content h2{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.banner__content button{
+    padding: .5rem 2rem;
+    outline: none;
+    border: 2px solid var(--secondary-color);
+    background-color: transparent;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
 @media (min-width: 640px) {
     .nav__links{
         display: flex;
@@ -189,4 +226,16 @@ header .section__container{
         gap: 1rem;
     }
 
+}
+
+@media (min-width: 786px) {
+    .banner__container .section__container{
+        justify-content: flex-end;
+    }
+
+    .banner__content{
+        align-items: flex-end;
+        text-align: right;
+        max-width: 800px;
+    }
 }
