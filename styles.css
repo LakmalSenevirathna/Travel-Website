@@ -203,6 +203,52 @@ header .section__container{
     cursor: pointer;
 }
 
+.display__container{
+    background-color: var(--secondary-color);
+}
+
+.display__container :is(.section__title, .section__subtitle){
+    color: var(--text-dark);
+}
+
+.display__grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.display__card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: .5rem;
+    background-color: var(--extra-light);
+    text-align: center;
+}
+
+.display__card i{
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.display__card h4{
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0 1rem;
+    color: var(--text-dark);
+}
+
+.display__card p{
+    font-size: .8rem;
+    padding: 0 1rem;
+    color: var(--text-dark);
+}
+
+.display__grid .grid-1{
+    grid-area: 1/1/3/3;
+}
+
 @media (min-width: 640px) {
     .nav__links{
         display: flex;
@@ -226,6 +272,26 @@ header .section__container{
         gap: 1rem;
     }
 
+    .display__grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .display__card{
+        gap: 0;
+    }
+
+    .display__card i{
+        font-size: 1.75rem;
+    }
+
+    .display__card h4{
+        font-size: 1rem;
+    }
+
+    .display__card p{
+        font-size: 0.7rem;
+    }
+
 }
 
 @media (min-width: 786px) {
@@ -237,5 +303,39 @@ header .section__container{
         align-items: flex-end;
         text-align: right;
         max-width: 800px;
+    }
+
+    .display__card{
+        gap: .5rem;
+    }
+
+    .display__card i{
+        font-size: 2.5rem;
+    }
+
+    .display__card h4{
+        font-size: .8rem;
+    }
+
+    .display__card p{
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .display__card{
+        gap: 1rem;
+    }
+
+    .display__card i{
+        font-size: 3rem;
+    }
+
+    .display__card h4{
+        font-size: 1.5rem;
+    }
+
+    .display__card p{
+        font-size: 1rem;
     }
 }
